@@ -26,7 +26,7 @@ storage "raft" {
 seal "pkcs11" {
   lib            = "/usr/lib/softhsm/libsofthsm2.so"
   token_label    = "vault"
-  pin            = "lolcats"
+  pin            = "rulez"
   key_label      = "vault-hsm-key"
   hmac_key_label = "vault-hsm-hmac-key"
   generate_key   = "true"
