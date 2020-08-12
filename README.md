@@ -1,6 +1,10 @@
 # Vault Software HSM Vagrant environment
 
-You need to download the zip files with HSM enabled Vault binaries, and put them in the bin directory.
+## Vault HSM binaries
+
+You need to download the HSM enabled Vault binaries (`amd64` arch), and put them in the `opt/hashicorp/vault/bin` directory.
+
+## Setup
 
 ```shell
 vagrant up
@@ -10,9 +14,9 @@ vagrant ssh
 # profit
 ```
 
-Check the scripts folder. The scripts automate most of the setup.
+Check the scripts folder. The scripts automate most of the setup. You need to run the `certs-setup.sh` script at least once.
 
-You need to run the certs-setup at least once. If you rebuild the VM, it will reuse the certs, but you will have to either use `VAULT_CAPATH` or run the following commands to avoid cert issues with the Vault CLI
+If you rebuild the VM, it will reuse the certs, but you will have to either use `VAULT_CAPATH` or run the following commands to avoid cert issues with the Vault CLI
 
 ```shell
 mkdir /usr/share/ca-certificates/consul
@@ -23,7 +27,7 @@ update-ca-certificates
 
 The `hc-repos.sh` script also installs `consul` and `terraform` open source using the official package repo.
 
-There's also a terraform folder. That one is for post configuration, and not really used for the HSM stuff.
+There's also a terraform folder. That one is for post configuration, and not used for the HSM stuff. Consider it a bad template :D
 
 ## Note about rc files
 
