@@ -1,5 +1,7 @@
 # Vault Software HSM Vagrant environment
 
+This repo started as a sandbox for a project. There are a couple of things that don't make any sense (raft? terraform files?). I'm only sharing this because the HSM stuff might be useful. Feel free to improve it by sending PRs.
+
 ## Vault HSM binaries
 
 You need to download the HSM enabled Vault binaries (`amd64` arch), and put them in the `opt/hashicorp/vault/bin` directory.
