@@ -29,6 +29,12 @@ The `hc-repos.sh` script also installs `consul` and `terraform` open source usin
 
 There's also a terraform folder. That one is for post configuration, and not used for the HSM stuff. Consider it a bad template :D
 
+## CentOS
+
+This Vagrant env uses Ubuntu, but if you want to use CentOS, be aware that the `softhsm` package behaves slightly different.
+
+ You will have to add the `vault` user to the `ods` group, instead of `softhsm`, and update ownership of the tokens directory with this command `chown -R root:ods /var/lib/softhsm/tokens`.
+
 ## Note about rc files
 
 Because I wrote this for myself, it installs my own set of rc files that I use everywhere. If you don't like that, just edit the `Vagrantfile` and remove this line from the shell provisioner (near the end of the file):
