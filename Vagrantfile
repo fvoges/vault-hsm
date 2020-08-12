@@ -73,6 +73,7 @@ Vagrant.configure("2") do |config|
     apt-get update
     apt-get upgrade -y
     curl https://gist.githubusercontent.com/fvoges/741de3b432e19c11c9bb/raw/3e71f78308a63f7a62cf9252131501b2e7338c7d/debian_install.sh|bash
+    /vagrant/scripts/hc-repos.sh
     /vagrant/scripts/softhsm2-setup.sh
     /vagrant/scripts/vault-setup.sh
   SHELL

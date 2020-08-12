@@ -1,7 +1,5 @@
 #!/bin/bash
 
-ln -sfn /opt/hashicorp/consul/bin/* /usr/local/bin
-
 mkdir -p /etc/vault.d/tls /usr/share/ca-certificates/consul
 cd /etc/vault.d/tls
 
